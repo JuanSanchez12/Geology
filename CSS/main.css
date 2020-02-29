@@ -1,0 +1,309 @@
+/*-------------------------------Global*/
+/*-------------------------------Global*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/*-------------------------------Typography*/
+body {
+  height: 100vh;
+  width: 100%;
+  min-height: 100%;
+  font-size: 1rem;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 252, 252, 0.5)), to(rgba(255, 255, 255, 0.1))), url("../images/nature-forest-trees-fog-4827.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.5), rgba(255, 255, 255, 0.1)), url("../images/nature-forest-trees-fog-4827.jpg") no-repeat;
+  background-position: bottom;
+  background-size: 100% 100%;
+  color: #071e3d;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+a {
+  color: #071e3d;
+  text-decoration: none;
+}
+
+/*-------------------------------Layout*/
+.container {
+  margin: auto;
+  width: 90%;
+  height: 100%;
+}
+
+header {
+  margin-top: 2em;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-container {
+  position: relative;
+  margin: 2em auto 0;
+  width: 30em;
+  height: 30em;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 612px) {
+  .content-container {
+    width: 100%;
+  }
+  .eclipse {
+    display: none;
+  }
+}
+
+/*-------------------------------Navigation*/
+.logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transition: .3s ease-in-out all;
+  transition: .3s ease-in-out all;
+}
+
+.logo:hover {
+  -webkit-transform: skew(360deg);
+          transform: skew(360deg);
+}
+
+/*Nav Bar*/
+nav {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item a {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-item::after {
+  content: ' ';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -10px;
+  background-color: #071e3d;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/*Contact*/
+.contact {
+  position: relative;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.contact::before {
+  content: ' ';
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  top: -5px;
+  left: -10px;
+  background-color: #071e3d;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.contact::after {
+  content: ' ';
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  bottom: -5px;
+  right: -10px;
+  background-color: #071e3d;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.contact:hover::before {
+  width: 100%;
+}
+
+.contact:hover::after {
+  width: 100%;
+}
+
+/*-------------------------------Homepage Content*/
+.heading {
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: .2em;
+  opacity: .8;
+}
+
+@media screen and (max-width: 475px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+.statement {
+  font-size: 2rem;
+  font-family: 'Simonetta', cursive;
+  margin-bottom: 1em;
+}
+
+.cta {
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #071e3d;
+  padding: .5em 1.5em;
+  border-radius: 24px;
+  opacity: .8;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+.cta:hover {
+  opacity: 1;
+}
+
+/*background*/
+.eclipse {
+  position: absolute;
+  border: 1px solid #071e3d;
+  border-radius: 50%;
+  width: 30em;
+  height: 30rem;
+  -webkit-animation: rotate 15s linear infinite;
+          animation: rotate 15s linear infinite;
+}
+
+.eclipse::before {
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  top: -2.5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 5px;
+  width: 5px;
+  background-color: #071e3d;
+  border-radius: 50%;
+}
+
+.eclipse::after {
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+  border: 1px solid #071e3d;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */
